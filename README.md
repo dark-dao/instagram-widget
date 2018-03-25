@@ -31,11 +31,12 @@ ___
 />
 ```
 ###### Результат:
-![Image of Yaktocat](./self-first-nine-posts.png)
+![Image](https://github.com/dark-dao/instagram-widget/blob/master/self-first-nine-posts.PNG?raw=true)
 
 ___
 
 ###### Показать личные посты с хэштегом #tea
+```
 <InstagramWidget
   accessToken='your access token'
   showPosts={false}
@@ -44,4 +45,4 @@ ___
 />
 ```
 ###### Результат:
-![Image of Yaktocat](./filter-by-tag.png)
+![Image](https://github.com/dark-dao/instagram-widget/blob/master/filter-by-tag.PNG?raw=true)
