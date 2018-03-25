@@ -13,6 +13,7 @@ export function* loadPostsSaga() {
       const action = yield take([CONSTANTS.LOAD_POSTS_REQUEST]);
       if(action) {
         const { count, accessToken } = action;
+        console.log(action);
         let selfPostsUrl = `/v1/users/self/media/recent/?access_token=${accessToken}`;
         if(count !== 0) {
           selfPostsUrl = `${selfPostsUrl}&count=${count}`;
@@ -26,7 +27,6 @@ export function* loadPostsSaga() {
         } else {
           yield put(loadPostsFail(request.data));
         }
-        console.log(request);
       }
     } catch(error) {
       yield put(loadPostsFail('Ошибка вызова api'));

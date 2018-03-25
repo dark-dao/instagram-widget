@@ -24,15 +24,13 @@ class App extends Component {
     super(props);
   }
   render() {
-    // showMediaByTag="#nofilter"
     return (
       <div className="_main">
         {this.props.children}
         <InstagramWidget
-          accessToken='2966098041.234d42c.e76560ea8b70455d852aa92f4d09d28a'
-          showPosts={false}
-          elementsCount={0}
-          showMediaByTag='tea'
+          accessToken='your access token'
+          showPosts={true}
+          elementsCount={9}
         />
       </div>
     );

@@ -33,7 +33,6 @@ class InstagramWidget extends Component {
   render() {
     const { accessToken, showMediaByTag, showPosts, elementsCount } = this.props;
     const { isOpen } = this.state;
-
     return (
       <div className={isOpen ? "_instagram-widget open" : "_instagram-widget closed" }>
         <div className="header">
@@ -44,14 +43,18 @@ class InstagramWidget extends Component {
             <Button onClick={() => {this.toggleSize()}}>{isOpen ? "Close" : "Open"}</Button>
           </div>
         </div>
-        <div className="content">
-          {!_.size(showMediaByTag) && showPosts ? (
-            <Posts accessToken={accessToken} count={elementsCount}/>
-          ) : null}
-          {_.size(showMediaByTag) && !showPosts ? (
-            <MediaByTag accessToken={accessToken} tagName={showMediaByTag} count={elementsCount}/>
-          ) : null}
-        </div>
+        {_.size(accessToken) ? (
+          <div className="content">
+            {!_.size(showMediaByTag) && showPosts ? (
+              <Posts accessToken={accessToken} count={elementsCount}/>
+            ) : null}
+            {_.size(showMediaByTag) && !showPosts ? (
+              <MediaByTag accessToken={accessToken} tagName={showMediaByTag} count={elementsCount}/>
+            ) : null}
+          </div>
+        ) : (
+          <span>Не указан accessToken</span>
+        )}
       </div>
     );
   }

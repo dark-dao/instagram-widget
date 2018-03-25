@@ -24,8 +24,8 @@ class Posts extends Component {
 
   }
   componentDidMount() {
-    const { accessToken, elementsCount } = this.props;
-    this.props.loadPosts(accessToken, elementsCount);
+    const { accessToken, count } = this.props;
+    this.props.loadPosts(accessToken, count);
   }
   render() {
     const { posts, isLoading } = this.props;
@@ -33,7 +33,6 @@ class Posts extends Component {
       <div className="media-block">
         {!isLoading ? (
           _.map(posts, (post, i) => {
-            console.log(post);
             const imageUrl = post.images ? post.images.standard_resolution.url : '';
             const postUrl = post.link ? post.link : null;
             const style = {
@@ -56,13 +55,11 @@ class Posts extends Component {
 };
 
 Posts.propTypes = {
-  accessToken: PropTypes.string,
-  elementsCount: PropTypes.number
+  accessToken: PropTypes.string
 };
 
 Posts.getDefaultProps = {
-  accessToken: '',
-  elementsCount: 0
+  accessToken: ''
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Posts);
