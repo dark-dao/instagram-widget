@@ -14,10 +14,14 @@ npm run start
 ```
 ###### Параметры:
 ```
+accessToken: string - токен для Instagram Api
 showPosts: bool - Показывать личные посты
 showMediaByTag: string - Показ личных постов у которых есть заданный хештэг (хештэг должен быть записан без символа #)
 elementsCount: number - Количество отображаемых постов (если указан 0, то отображаются все найденные посты)
 При клике на картинку происходит переход на (instagram.com) сраницу с постом
+
+P.S
+Получить accessToken можно на сайте http://instagram.pixelunion.net/
 
 ```
 ___
