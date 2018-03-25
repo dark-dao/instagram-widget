@@ -40,7 +40,7 @@ class Posts extends Component {
             };
             return (
               <div key={i} className="image-block">
-                <div style={style} className="image" onClick={() => {this.transitionToPost(postUrl)}}>
+                <div style={style} className="image" >
                   {postUrl ? <Link target="_blank" to={postUrl}/> : null}
                 </div>
               </div>
