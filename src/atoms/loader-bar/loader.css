@@ -1,0 +1,22 @@
+@keyframes spinnerFrame {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.loader-bar {
+  width: 100%;
+  height: auto;
+}
+.loader-bar .spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #ccc;
+  border-top-color: #666;
+  border-radius: 50%;
+  margin: 2em auto;
+  position: relative;
+  animation-name: spinnerFrame;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

@@ -1,0 +1,43 @@
+{
+  "name": "react-redux-router",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "express": "^4.16.3",
+    "fetch": "^1.1.0",
+    "fetch-promise": "^1.0.2",
+    "helmet": "^3.12.0",
+    "less-watch-compiler": "^1.11.0",
+    "node-fetch": "^2.1.1",
+    "node-instagram": "^4.1.0",
+    "node-less-chokidar": "^0.1.2",
+    "npm-run-all": "^4.1.2",
+    "path": "^0.12.7",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.16.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "build-css": "node-less-chokidar src",
+    "watch-css": "node-less-chokidar src --watch",
+    "start-server": "node production.js",
+    "start": "npm run build-css && run-p -ncr watch-css start-js",
+    "start-js": "react-scripts start",
+    "build": "run-s -n build-css build-js",
+    "build-js": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "author": "",
+  "license": "ISC"
+}
