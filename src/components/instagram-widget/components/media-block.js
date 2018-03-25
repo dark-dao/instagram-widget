@@ -33,7 +33,6 @@ class MediaByTag extends Component {
       <div className="media-block">
         {!isLoading ? (
           _.map(media, (item, i) => {
-            console.log(item);
             const imageUrl = item.images ? item.images.standard_resolution.url : '';
             const postUrl = item.link ? item.link : null;
             const style = {

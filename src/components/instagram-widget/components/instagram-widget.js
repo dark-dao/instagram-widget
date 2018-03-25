@@ -27,9 +27,6 @@ class InstagramWidget extends Component {
       isOpen: true
     };
   }
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
-  }
   toggleSize() {
     this.setState({isOpen: !this.state.isOpen});
   }

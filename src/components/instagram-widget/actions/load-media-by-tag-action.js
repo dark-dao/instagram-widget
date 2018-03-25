@@ -1,7 +1,6 @@
 import CONSTANTS from '../constants';
 
 export const loadMediaByTag = (accessToken, tagName, count) => {
-  console.log(accessToken, tagName, count);
   return {
     type: CONSTANTS.LOAD_MEDIA_BY_TAG_REQUEST,
     isLoading: true,

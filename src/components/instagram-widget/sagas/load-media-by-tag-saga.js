@@ -21,8 +21,6 @@ export function* loadMediaByTagSaga() {
           selfMediaUrl,
           null
         ));
-        console.log(selfMediaUrl);
-        console.log(request);
         if(request.meta.code == 200) {
           yield put(loadMediaByTagSuccess(request.data));
         } else {

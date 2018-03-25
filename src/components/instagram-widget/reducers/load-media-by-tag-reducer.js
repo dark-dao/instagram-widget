@@ -10,7 +10,6 @@ const initialState = {
 };
 
 const loadMediaByTagReducer = (state = initialState, action = {}) => {
-  console.log(action);
   switch (action.type) {
     case CONSTANTS.LOAD_MEDIA_BY_TAG_REQUEST:
       const stateObject = Object.assign(...state, action);
